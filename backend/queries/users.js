@@ -3,8 +3,8 @@ const db = require('../db/index');
 
 const getSingleUser = async (req, res, next) => {
     try {
-        let userId = req.params.id;
-        let user = await db.one(`SELECT * FROM users WHERE id=${userId}`);
+        let id = req.params.id;
+        let user = await db.one(`SELECT * FROM users WHERE id=${id}`);
         res.status(200).json({
             status: "success",
             message: "single user",
@@ -43,8 +43,8 @@ const logIn = async (req, res, next) => {
 
 const deleteUser = async (req, res, next) => {
     try {
-        let {userId} = req.params.id;
-        let user = ("DELETE FROM users WHERE id=$1 RETURNING *", userId)
+        let {id} = req.params.id;
+        let user = ("DELETE FROM users WHERE id=$1 RETURNING *", id)
         res.status(200).json({
             status: "success",
             message: "user deleted",
@@ -63,8 +63,8 @@ const deleteUser = async (req, res, next) => {
 const editUser = async (req, res, next) => {
     try {
         let {userName, user_pic} = req.body;
-        let userId = req.params.id;
-        let user = await db.one(`UPDATE users SET  userName='${userName}', user_pic='${user_pic}' WHERE id=${userId} RETURNING *`);
+        let id = req.params.id;
+        let user = await db.one(`UPDATE users SET  userName='${userName}', user_pic='${user_pic}' WHERE id=${id} RETURNING *`);
         res.status(200).json({
             status: "success",
             message: "updated user" ,

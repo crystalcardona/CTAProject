@@ -1,0 +1,29 @@
+/* #F9E8B4
+#E5AE6B
+#B66A4D
+#492D29
+#071031
+#F9DC79
+#FBD97F */
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+body {
+  font-family: 'Amatic SC', cursive;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  width: auto;
+  font-family: 'Amatic SC', cursive;
+  overflow-y: scroll;
+  background-color: #071031;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}

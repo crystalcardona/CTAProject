@@ -1,13 +1,13 @@
-const hashtag = require("express").Router();
+const hashtags = require("express").Router();
 
-const { getHashtagByHashtag, createHashtag, deleteHashtag } = require("../queries/hashtags");
-
-
-hashtag.post("/getHashtag", getHashtagByHashtag);
-
-hashtag.post("/", createHashtag);
-
-hashtag.delete("/:id", deleteHashtag);
+const { searchByHashtag, createHashtag, deleteHashtag } = require("../queries/hashtags");
 
 
-module.exports = hashtag;
+hashtags.post("/getHashtag", searchByHashtag);
+
+hashtags.post("/", createHashtag);
+
+hashtags.delete("/:id", deleteHashtag);
+
+
+module.exports = hashtags;

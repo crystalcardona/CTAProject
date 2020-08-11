@@ -1,0 +1,48 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+h1 {
+  font-family: 'Amatic SC', cursive;
+  color: #F9DC79;
+}
+.sidePic{
+  height: 25em;  
+  width: auto;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+input{
+  border-radius: 8px;
+  width: 15em;
+}
+
+.signUpContainer{
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+}
+
+.LeftSide{
+  background-image: url("../assests/sidepic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 42em;
+  width: auto;
+  box-shadow: 4px 4px 10px #191102ff;
+  animation-duration: 2s;
+  animation-name: slideIn;
+  transition: transform 1s;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.loginContainer{
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo{
+  height: 10em;
+  margin-top: 5px;
+  
+}

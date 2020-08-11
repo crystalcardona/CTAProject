@@ -1,0 +1,17 @@
+/* #F9E8B4
+#E5AE6B
+#B66A4D
+#492D29
+#071031
+#F9DC79
+#FBD97F */
+
+h1 {
+color: #FBD97F;
+}
+
+.homeContainer {
+    display: grid;
+    grid-template-columns:  1fr, 1fr;
+}
+
