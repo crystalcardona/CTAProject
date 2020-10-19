@@ -42,7 +42,7 @@
 
 // const createComments = async (req, res, next) => {
 //     try {
-//         let comments = await db.one("INSERT INTO comments (comments_id, comment) VALUES (${post_id}, ${post}) RETURNING *", req.body)
+//         let comments = await db.one("INSERT INTO comments (comments_id,commenter_id, comment) VALUES (${comments_id}${commenter_id}, ${comment}) RETURNING *", req.body)
 //         res.status(200).json({
 //             status: "success",
 //             message: "created comment",

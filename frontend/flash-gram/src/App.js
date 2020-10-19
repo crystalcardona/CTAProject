@@ -10,6 +10,7 @@ import "./App.css"
 import Header from "./Components/header"
 import Home from "./Components/home"
 import AuthProvider from "./providers/AuthContext"
+import { AuthRoute } from "./util/routeUtil.js"
 
 
 
@@ -18,15 +19,17 @@ function App() {
     <div className="App">
     <AuthProvider>
     <Header />
-      <Route exact path="/">
+    <Switch>
+      <AuthRoute exact path="/">
         <SignUp />
-      </Route>
-      <Route path="/login">
+      </AuthRoute>
+      <AuthRoute path="/login">
       <LogIn />
-      </Route>
+      </AuthRoute>
      <Route exact path="/home">
        <Home />
      </Route>
+     </Switch>
 
      {/* <Route path={"/profile"} component={Profile}/> */}
       {/* <Route exact path={"/login"} component={LogIn}/>
